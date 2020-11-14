@@ -20,13 +20,16 @@ var numChar = ['0','1','2','3','4','5','6','7','8','9']
    }
 
   if (initialChoice) {
+ 
+    var lengthPass = 8
 
-  var lengthPass = 8
+   var lengthPass = prompt("Enter desired length in numbers between 8 and 128","8")
 
-  var lengthPass = prompt("Enter desired length in numbers between 8 and 128")
-  alert("Your password will be " + lengthPass + " Characters long - Nice choice!" )
+   lengthPass = Number(lengthPass)
 
-  alert("Next you will need to chose as at least one option for Upper, lower case, numbers and special characters to construct your password")
+   alert("Your password will be " + lengthPass + " Characters long - Nice choice!" )
+
+  alert("Next you will need to chose as at least one option for UPPER, lower case, Numbers 1234..  and  Special characters @*!@@")
 
   //This will confirm user choices and circle back if non are selected
   
@@ -35,25 +38,25 @@ var numChar = ['0','1','2','3','4','5','6','7','8','9']
     //y is to identify user combo for password selection
     var y = 0
 
-  var lowerCharChoice   = confirm("Would you like to enclose Lower Case Characters ?")
+  var lowerCharChoice   = confirm("Would you like to apply  >>l o w e r<< case?")
   if (lowerCharChoice){
       x=x+1
       y = y + .0001
    }
  
-   var upperCharChoice   = confirm("Would you like to include Upper Case Characters ?")
+   var upperCharChoice   = confirm("Would you like to apply >>U P P E R<< CASE ?")
    if (upperCharChoice){
      x=x+1
      y = y + .001 
    }
  
-   var specialCharChoice = confirm("Would you like Special Characters Included ?")
+   var specialCharChoice = confirm("Would you like to apply  >>S P # C ! @ l<<  Characters *@!")
    if (specialCharChoice){
       x=x+1
       y = y + .01
    }
   
-   var numCharChoice     = confirm("Would you like numbers included ?")
+   var numCharChoice     = confirm("Would you like to apply >>N u m b e r s<<  1,2,3.. ?")
     if (numCharChoice){
       x=x+1
       y = y + .1
@@ -123,14 +126,9 @@ var password    = ""
 
 for (x = 0; x < lengthPass; x++) {
     var generator = stringSelector[Math.floor(Math.random() * stringSelector.length)]
-    console.log(generateBtn)
     var password = password + generator
-    console.log(password)
 } 
- 
-
-    var passwordText = document.querySelector("#password");
-
+     var passwordText = document.querySelector("#password");
     passwordText.value = password;
 
 }
