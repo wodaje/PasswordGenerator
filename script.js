@@ -12,7 +12,16 @@ var numChar = ['0','1','2','3','4','5','6','7','8','9']
 
 // User Choice to continue with password generator
   var initialChoice = confirm("Are you looking to generate a random secure password? ")  
+
+  if(!initialChoice){
+    
+   alert("No Password was generated as per request")
+   
+   }
+
   if (initialChoice) {
+
+  var lengthPass = 8
 
   var lengthPass = prompt("Enter desired length in numbers between 8 and 128")
   alert("Your password will be " + lengthPass + " Characters long - Nice choice!" )
@@ -104,26 +113,28 @@ switch(y){
         var stringSelector =  lowerChar.concat(upperChar,specialChar,numChar);
     }  
 
-
-alert(stringSelector)
-
  //Selecting combined array to generate password 
-//array1.concat(array2, array3, ..., arrayX)
+
 // syntax for picking a random item from an array
 //var randomItem = arr[Math.floor(Math.random() * arr.length)]
 
+var generator   = ""
+var password    = ""
 
+for (x = 0; x < lengthPass; x++) {
+    var generator = stringSelector[Math.floor(Math.random() * stringSelector.length)]
+    console.log(generateBtn)
+    var password = password + generator
+    console.log(password)
+} 
+ 
 
-    var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
 
-
-  }
-
-  alert("No Password was generated as per request")
-  }
+}
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

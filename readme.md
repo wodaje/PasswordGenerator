@@ -4,6 +4,12 @@ Program first confirms user selection to proceed with password generation - if s
 
 User then chooses password length = choice is confirmed
 
+This number needs to be between 8 and 128 = this piece still needs to be fixed with data validation and input parameter restrictions
+
 User then selects password criteria - note a choice must be made or the choices will continue to loop until at least one choice is selected - else error message will be displayed - there is no way to exit from this choice
 
-Choice composite of User selected Password is displayed
+The same user choice loop is used to assign value to the selection choices with value y
+
+This value is then used in a logical .1111 selector operation under switch in order to  combine the appropriate string from which to randomly generate the password
+
+Using the user number choice we can now auto generate a password and display
