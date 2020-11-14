@@ -27,6 +27,41 @@ var numChar = ['0','1','2','3','4','5','6','7','8','9']
 
    lengthPass = Number(lengthPass)
 
+   //Data integrity Check 
+
+   if(lengthPass <8) {
+   var lengthPass = prompt("Please Re-Enter value of 8 or greater (still less then 128)","8")
+       }
+
+   else if(lengthPass>128){
+   var lengthPass = prompt("Please Re-Enter value between 8 and LESS then 128!","102")
+      }
+
+   else if (isNaN(lengthPass)){
+   var lengthPass = prompt("Pleae Re-Enter an Actual >>NUMBER<< VALUE between 8 and 128","NOT Eight - but 8")
+      }
+ 
+   lengthPass = Number(lengthPass)
+
+   // Has to run a second time past correction for error obsultion
+
+var response = "Please be sure to follow instructions and start over and enter appropriate parameters for length of password desired - thank you"
+
+   if(lengthPass <8) {
+    alert(response)
+    return
+        }
+ 
+    else if(lengthPass>128){
+    alert(response)
+    return
+       }
+ 
+    else if (isNaN(lengthPass)){
+    alert(response)
+    return
+       }
+     
    alert("Your password will be " + lengthPass + " Characters long - Nice choice!" )
 
   alert("Next you will need to chose as at least one option for UPPER, lower case, Numbers 1234..  and  Special characters @*!@@")
