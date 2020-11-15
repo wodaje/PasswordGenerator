@@ -25,6 +25,7 @@ var numChar = ['0','1','2','3','4','5','6','7','8','9']
 
    var lengthPass = prompt("Enter desired length in numbers between 8 and 128","8")
 
+   //Need to make sure system sees as number to avoid undefined glitches
    lengthPass = Number(lengthPass)
 
    //Data integrity Check 
@@ -63,6 +64,9 @@ var response = "Please be sure to follow instructions and start over and enter a
        }
      
    alert("Your password will be " + lengthPass + " Characters long - Nice choice!" )
+    
+    // seems redundant but necessary to make sure no glitches come into play post data validation although it's been redeclared already once...
+    lengthPass = Number(lengthPass)
 
   alert("Next you will need to chose as at least one option for UPPER, lower case, Numbers 1234..  and  Special characters @*!@@")
 
