@@ -12,6 +12,4 @@ The same user choice loop is used to assign value to the selection choices with 
 
 This value is then used in a logical .1111 selector operation under switch in order to  combine the appropriate string from which to randomly generate the password
 
-I may next try to write a function for the 0/1 selector to reduce the heavy switch load coding prone to potential error and inflexibility.
-
 Using the user number choice we can now auto generate a password and display
